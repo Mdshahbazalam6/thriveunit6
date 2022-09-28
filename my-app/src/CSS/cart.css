@@ -1,0 +1,72 @@
+.removefromCart{
+    width: 90%;
+    margin: auto;
+    border-radius: 1vw;
+    background-color: rgb(0,107,255);
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+.CartContainer{
+    width: 25vw;
+    border-radius: 1vw;
+
+}
+.cartBox{
+    background-color: rgb(39,118,148);
+    border-radius: 1vw;
+    margin: 1vw 3vw;
+}
+.increaseButtonBox{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+.increase{
+    width: 45%;
+    margin: auto;
+    border-radius: 1vw;
+    background-color: rgb(0,107,255);
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+.increase:hover {
+    background-color: white;
+    color: rgb(0,107,255);
+}
+.totalButtonBox{
+    background-color: whitesmoke;
+    width: 17vw;
+    margin: 1vw 4vw;
+
+}
+.totalButton{
+    background-color: red;
+    color: white;
+    width: 100%;
+    margin: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.Order{
+    background-color: green;
+    color: white;
+    width: 100%;
+    margin: auto;
+    height: 30px;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.Order:hover {
+    background-color: whitesmoke;
+    color: black;
+}

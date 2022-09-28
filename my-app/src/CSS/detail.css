@@ -1,0 +1,35 @@
+.detailContainer{
+    width: 30vw;
+    height: 600px;
+    margin-top: 20px;
+    margin-left: 5vw;
+    background-color: rgb(39,118,148);
+    border-radius: 1vw;
+}
+.brand{
+    margin: 1vh;
+    text-align: left;
+    color: white;
+    font-size: 1.2vw;
+}
+.addtoCart{
+    width: 90%;
+    margin: auto;
+    border-radius: 1vw;
+    background-color: rgb(0,107,255);
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+.addtoCart:hover {
+    background-color: white;
+    color: rgb(0,107,255);
+    
+}
+
+/* text-align: center;
+    margin: auto;
+    display: flex;
+    align-items: center; */

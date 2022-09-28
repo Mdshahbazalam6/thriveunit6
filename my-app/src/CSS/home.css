@@ -1,0 +1,35 @@
+.HomeContainer{
+    width: 80vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 30px;
+    gap: 1vw;
+}
+.productImageBox{
+    width: 18vw;
+    background-color: whitesmoke;
+}
+
+.productImageBox > img{
+    width: 100%;
+}
+.HomeContainerh2{
+    text-align: center;
+    /* color: white; */
+}
+.HomePageMoreDetail{
+    width: 90%;
+    margin: auto;
+    border-radius: 1vw;
+    background-color: rgb(0,107,255);
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 1.2vw;
+    font-weight: 900;
+}
+.HomePageMoreDetail:hover {
+    background-color: white;
+    color: rgb(0,107,255);
+}
