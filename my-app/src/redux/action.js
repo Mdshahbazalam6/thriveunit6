@@ -1,4 +1,4 @@
-import { CART_dATA, DETAIL, GET_DATA } from "./actionType"
+import { CART_dATA, DETAIL, GET_DATA, LOGIN } from "./actionType"
 
 const getData = ( payload ) =>{
     return{
@@ -21,6 +21,12 @@ const CartData = ( payload ) =>{
     }
 }
 
+const loginData = ( payload ) =>{
+    return{
+        type:LOGIN,
+        payload
+    }
+}
 export async function getDatafromjson ( dispatch ){
     try {
         let res = await fetch('http://localhost:8080/products')
@@ -55,13 +61,55 @@ export async function getCartData ( dispatch ){
 }
 
 
-// export async function login ( dispatch ){
-//     try {
-//         let res = await fetch('https://www.reqres.in/api/login')
-//         let data = await res.json()
-//         // console.log(data,'action.js')
-//         dispatch(loginData(data))
-//     } catch (error) {
-//         console.log(error)
-//     }
-// }
+export async function login ( dispatch,email,password,navigate ){
+    try {
+        let res = await fetch('https://reqres.in/api/login',{ 
+            method: "post",
+            body:JSON.stringify({email,password}),
+            headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        })
+        let data = await res.json()
+        console.log(data,'login data action.js')
+        dispatch(loginData(data))
+        navigate('/')
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const removefromCart= async( id,dispatch ) =>{
+    try {
+      let res = await fetch(`http://localhost:8080/cart/${id}`,{
+          method: "DELETE"
+      })
+      let data = await res.json()
+      getCartData(dispatch)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  export const handleNumber = async(ele,num,dispatch) =>{
+   ele.number = ele.number + num
+    if(ele.number < 0){
+    //   alert("Quantity can not be Negative integer")
+    removefromCart(ele.id,dispatch)
+      return
+    }
+    try {
+      let res = await fetch(`http://localhost:8080/cart/${ele.id}`,{
+          method :"PATCH",
+          body:JSON.stringify(ele),
+          headers: {
+              'Content-type': 'application/json'
+          }
+      })
+      let data = await res.json()
+      getCartData(dispatch)
+    } catch (error) {
+      console.log(error)
+    }
+  }

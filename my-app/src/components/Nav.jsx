@@ -1,19 +1,22 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router'
 import '../CSS/nav.css'
 const Nav = () => {
     const navigate = useNavigate()
+    const { token } = useSelector((store)=>store)
 
     const navigateHome = ( ) => navigate('/')
     const navigateCart = ( ) => navigate('/cart')
 
-    const navigateLogin = ( ) => navigate('/')
+    const navigateLogin = ( ) => navigate('/login')
 
   return (
    <div className="NavbarContainer">
   <div className="NavbarInnerContainer">
-  <div className="NavbarChild" onClick={navigateHome}>Home</div>
-    <div className="NavbarChild" onClick={navigateCart}>Cart</div>
+  {token ? <div className="NavbarChild" onClick={navigateHome}>Home</div> : <div className="NavbarChild" >Home</div>}
+    
+  {token ? <div className="NavbarChild" onClick={navigateCart}>Cart</div> : <div className="NavbarChild" >Cart</div>}
     <div className="NavbarChild" onClick={navigateLogin}>Login</div>
   </div>
    </div>

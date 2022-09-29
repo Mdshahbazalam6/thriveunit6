@@ -16,6 +16,8 @@ body{
     font-size: 1.5vw;
     font-weight: 800;
     display: flex;
+    position: sticky;
+    top: 0px;
 }
 .NavbarInnerContainer{
     width: 40vw;

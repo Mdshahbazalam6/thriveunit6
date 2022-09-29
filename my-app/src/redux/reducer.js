@@ -1,9 +1,10 @@
-import { CART_dATA, DETAIL, GET_DATA } from "./actionType"
+import { CART_dATA, DETAIL, GET_DATA, LOGIN } from "./actionType"
 
 const store = {
     products:[],
     detail:{},
-    cart:[]
+    cart:[], 
+    token:""
 }
 
 export const reducer = ( initState = store,{type,payload}) =>{
@@ -19,6 +20,10 @@ export const reducer = ( initState = store,{type,payload}) =>{
         case CART_dATA :
             return {
                 ...initState,cart:payload
+            }
+        case LOGIN :
+            return{
+                ...initState,token:payload
             }
         default :
         return initState

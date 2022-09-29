@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartData } from '../redux/action'
+import { getCartData,handleNumber,removefromCart } from '../redux/action'
 import '../CSS/cart.css'
 import { useNavigate } from 'react-router'
 
@@ -13,39 +13,7 @@ const Cart = () => {
     },[])
     const { cart } = useSelector((store)=>store)
     console.log(cart)
-    const removefromCart= async( id ) =>{
-      try {
-        let res = await fetch(`http://localhost:8080/cart/${id}`,{
-            method: "DELETE"
-        })
-        let data = await res.json()
-        getCartData(dispatch)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-
-    const handleNumber = async(ele,num) =>{
-     ele.number = ele.number + num
-      if(ele.number < 0){
-        alert("Quantity can not br Negative integer")
-        return
-      }
-      try {
-        let res = await fetch(`http://localhost:8080/cart/${ele.id}`,{
-            method :"PATCH",
-            body:JSON.stringify(ele),
-            headers: {
-                'Content-type': 'application/json'
-            }
-        })
-        let data = await res.json()
-        getCartData(dispatch)
-      } catch (error) {
-        console.log(error)
-      }
-    }
-
+   
     let amount = 0
 
     const Order = ( )=>{
@@ -71,10 +39,10 @@ const Cart = () => {
                 <p className="brand">Price : {ele.price*ele.number <= 0 ? ele.price : ele.price*ele.number}</p>
                 <p className="brand">Quantity : {ele.number}</p>
                 <div className="increaseButtonBox">
-                <div className="increase" onClick={()=>handleNumber(ele,1)}>INCR</div>
-                <div className="increase" onClick={()=>handleNumber(ele,-1)}>DECR</div>
+                <div className="increase" onClick={()=>handleNumber(ele,1,dispatch)}>INCR</div>
+                <div className="increase" onClick={()=>handleNumber(ele,-1,dispatch)}>DECR</div>
                 </div>
-                <div className="removefromCart" onClick={()=>removefromCart(ele.id)}>Remove from Cart</div>
+                <div className="removefromCart" onClick={()=>removefromCart(ele.id,dispatch)}>Remove from Cart</div>
                 </div>
                 </div>
             })

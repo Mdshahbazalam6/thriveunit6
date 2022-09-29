@@ -26,6 +26,7 @@ const MorePage = () => {
         })
         let data = await res.json()
         console.log(data)
+        alert('Item Got Added to Cart')
       } catch (error) {
         console.log(error)
       }

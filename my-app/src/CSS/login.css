@@ -1,0 +1,53 @@
+/* emailInput passwordInput Login */
+.loginMainConatiner{
+    width: 15vw;
+    background-color: white;
+    height: 250px;
+    margin: 100px 42vw;
+    border-radius: 1vw;
+}
+.loginContainer{
+    width: 15vw;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 200px;
+    border-radius: 1vw;
+}
+.loginh2{
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 1vh;
+}
+.emailInput{
+    width: 13vw;
+    margin-left: 1vw;
+    padding: 1vh;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.passwordInput{
+    width: 13vw;
+    margin-left: 1vw;
+    padding: 1vh;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.Login{
+    width: 13vw;
+    margin-left: 1vw;
+    padding: 1vh;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    font-size: 1vw;
+    font-weight: 900;
+}
+.Login:hover {
+    background-color: rgb(0,107,255);
+}
