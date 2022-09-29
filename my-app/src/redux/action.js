@@ -94,7 +94,7 @@ export const removefromCart= async( id,dispatch ) =>{
 
   export const handleNumber = async(ele,num,dispatch) =>{
    ele.number = ele.number + num
-    if(ele.number < 0){
+    if(ele.number <= 0){
     //   alert("Quantity can not be Negative integer")
     removefromCart(ele.id,dispatch)
       return
