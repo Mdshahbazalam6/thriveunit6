@@ -16,8 +16,8 @@ const Login = () => {
     <div className="loginMainConatiner">
       <div className="loginContainer">
       <h2 className='loginh2'>LOGIN</h2>
-     <input  className='emailInput' type="email" onChange={(e)=>setEmail(e.target.value)}/><br/>
-     <input className='passwordInput' type="password"  onChange={(e)=>setPassword(e.target.value)}/><br />
+     <input  className='emailInput' type="email" onChange={(e)=>setEmail(e.target.value)} placeholder='Enter Email'/><br/>
+     <input className='passwordInput' type="password"  onChange={(e)=>setPassword(e.target.value)} placeholder='Enter Password'/><br />
      <button className='Login' onClick={()=>login(dispatch,email,password,navigate)}>LOGIN</button>
     </div>
     </div>

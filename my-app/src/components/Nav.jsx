@@ -14,9 +14,9 @@ const Nav = () => {
   return (
    <div className="NavbarContainer">
   <div className="NavbarInnerContainer">
-  {token ? <div className="NavbarChild" onClick={navigateHome}>Home</div> : <div className="NavbarChild" >Home</div>}
+  {token ? <div className="NavbarChild" onClick={navigateHome}>Home</div> : <div className="NavbarChild" onClick={()=>alert('Login First')}>Home</div>}
     
-  {token ? <div className="NavbarChild" onClick={navigateCart}>Cart</div> : <div className="NavbarChild" >Cart</div>}
+  {token ? <div className="NavbarChild" onClick={navigateCart}>Cart</div> : <div className="NavbarChild" onClick={()=>alert('Login First')}>Cart</div>}
     <div className="NavbarChild" onClick={navigateLogin}>Login</div>
   </div>
    </div>

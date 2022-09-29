@@ -25,7 +25,7 @@
     margin-left: 1vw;
     padding: 1vh;
     border-radius: 10px;
-    border: none;
+    border: 1px solid black;
     outline: none;
 }
 .passwordInput{
@@ -33,7 +33,7 @@
     margin-left: 1vw;
     padding: 1vh;
     border-radius: 10px;
-    border: none;
+    border: 1px solid black;
     outline: none;
 }
 .Login{
