@@ -31,13 +31,6 @@ const MorePage = () => {
         console.log(error)
       }
     }
-
-    // {
-        // method: "post",
-        // headers: {
-        //   'Accept': 'application/json',
-        //   'Content-Type': 'application/json'
-        // },
   return (
     <div className="detailContainer">
      <div className="detailImage">
@@ -50,6 +43,8 @@ const MorePage = () => {
 
      <p className="brand">Price : {detail.price}</p>
 
+     {/* =================this function invoke the function addtocar in action.js that will add the Item in the cart ============================== */}
+     
      <div className="addtoCart" onClick={addtoCart}>Add To Cart</div>
 
     </div>

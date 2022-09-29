@@ -307,21 +307,21 @@
   ],
   "cart": [
     {
-      "id": 2,
-      "brand": "Blackberry's",
-      "title": "Regukar Fit Printed Shirt",
-      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/10944602/2020/3/5/da4c1a83-987b-4afa-baad-f72039dbdedb1583385686526-Roadster-Men-Teal-Blue--Black-Regular-Fit-Printed-Casual-Shi-4.jpg",
-      "category": "men",
-      "price": 699,
-      "number": 1
-    },
-    {
       "id": 38,
       "brand": "Ecraft India",
       "title": "Handcrafted Leather crafted",
       "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/6698630/2018/6/9/023f7703-453d-4d60-92fb-ed99704223d11528527564425-eCraftIndia-Brass-Antique-Music-Decorative-Canon-Showpiece-4671528527564162-1.jpg",
       "price": 1477,
       "category": "homedecor",
+      "number": 1
+    },
+    {
+      "id": 33,
+      "brand": "Fancy Mart",
+      "title": "Artificial flowers with pot",
+      "image": "https://assets.myntassets.com/f_webp,dpr_1.0,q_60,w_210,c_limit,fl_progressive/assets/images/productimage/2019/7/30/078471d8-aa80-4fe9-9831-0af81ee4e2c41564476690067-1.jpg",
+      "category": "homedecor",
+      "price": 399,
       "number": 1
     }
   ]

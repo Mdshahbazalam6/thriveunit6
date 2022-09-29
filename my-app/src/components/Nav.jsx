@@ -14,8 +14,11 @@ const Nav = () => {
   return (
    <div className="NavbarContainer">
   <div className="NavbarInnerContainer">
+    {/* =================Home button will active only that time when the token is available===================== */}
   {token ? <div className="NavbarChild" onClick={navigateHome}>Home</div> : <div className="NavbarChild" onClick={()=>alert('Login First')}>Home</div>}
     
+    {/* =================Home button will active only that time when the token is available===================== */}
+
   {token ? <div className="NavbarChild" onClick={navigateCart}>Cart</div> : <div className="NavbarChild" onClick={()=>alert('Login First')}>Cart</div>}
     <div className="NavbarChild" onClick={navigateLogin}>Login</div>
   </div>

@@ -35,13 +35,21 @@ const Cart = () => {
                 <p className="brand">Brand Name : {ele.brand}</p>
 
                 <p className="brand">Category : {ele.category}</p>
+                
+                {/* ===========when the quantity will become 0 then it will show the actual price else will show the calculated price =======  */}
 
                 <p className="brand">Price : {ele.price*ele.number <= 0 ? ele.price : ele.price*ele.number}</p>
                 <p className="brand">Quantity : {ele.number}</p>
+
+                {/* =================this function invoke the function handleNumber in action.js that will manage the quatity of the Item in the cart ============================== */}
+
                 <div className="increaseButtonBox">
                 <div className="increase" onClick={()=>handleNumber(ele,1,dispatch)}>INCR</div>
                 <div className="increase" onClick={()=>handleNumber(ele,-1,dispatch)}>DECR</div>
                 </div>
+
+                {/* =================this function invoke the function removefromcart in action.js that will manage the removethe Item fromthe cart ============================== */}
+
                 <div className="removefromCart" onClick={()=>removefromCart(ele.id,dispatch)}>Remove from Cart</div>
                 </div>
                 </div>
